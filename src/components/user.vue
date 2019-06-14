@@ -1,11 +1,11 @@
 <template>
-    <div class="card mb-1">
+    <div class="card mb-1 mt-1">
         <div class="card-header row ml-0 mr-0">
             <h3 @click="fetchPosts" class="userToggle mb-0 col-md">
                 <i class='cui-user'/>
                 {{ " " + info.name }}
             </h3>
-            <h3 class="col-md"> 
+            <h3 class="mb-0 col-md"> 
                 <i class='cui-envelope-closed'/>
                 {{ " " + info.email }}
             </h3>   
@@ -58,11 +58,11 @@
     }
 </script>
 <style>
-.userToggle:hover{
-    cursor: pointer; 
-    text-decoration: underline;
-}
-i{
-    color:darkblue;
-}
+    .userToggle:hover{
+        cursor: pointer; 
+        text-decoration: underline;
+    }
+    i{
+        color:darkblue;
+    }
 </style>

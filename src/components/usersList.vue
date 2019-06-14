@@ -1,7 +1,7 @@
 <template>
     <div class='container p-0'>
         <div v-if="isLoading" class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+            <span class="sr-only">Loading...</span>
         </div>
         <user 
             v-for="user in users"
