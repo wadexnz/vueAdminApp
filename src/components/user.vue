@@ -11,10 +11,10 @@
             </h3>   
         </div>
         <div v-show="toggleBody" class="card-body">
+            <userDetail v-bind:detail="info"/>
             <div v-if="isLoading" class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-            <userDetail v-bind:detail="info"/>
             <postView 
                 v-for="post in posts"
                 v-bind:key="post.id" 
