@@ -22,16 +22,15 @@
             }
         },
         created: function () {
-            var vm = this;
             fetch('https://jsonplaceholder.typicode.com/users')
                 .then(res => res.json())
                 .then(res => {
-                    vm.users = res;
-                    vm.isLoading = false;
+                    this.users = res;
+                    this.isLoading = false;
                 });
         },
         components: {
             UserItem
-        },
+        }
     }
 </script>

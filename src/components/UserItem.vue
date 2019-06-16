@@ -39,14 +39,13 @@
         },
         methods: {
             fetchPosts: function () {
-                var vm = this;
-                vm.toggleBody = !vm.toggleBody;
-                if( vm.posts.length <= 0 ) {
-                    fetch('https://jsonplaceholder.typicode.com/posts/?userId=' + vm.info.id)
+                this.toggleBody = !this.toggleBody;
+                if( this.posts.length <= 0 ) {
+                    fetch('https://jsonplaceholder.typicode.com/posts/?userId=' + this.info.id)
                         .then(res => res.json())
                         .then(res => {
-                            vm.posts = res.splice(0, 10);
-                            vm.isLoading = false;
+                            this.posts = res.splice(0, 10);
+                            this.isLoading = false;
                         });
                 }
             }
