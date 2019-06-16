@@ -17,7 +17,8 @@
         }
     }
 </script>
-<style>
+
+<style scoped>
     .postToggle:hover{
         cursor: pointer; 
         text-decoration: underline;

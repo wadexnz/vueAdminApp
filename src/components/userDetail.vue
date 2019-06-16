@@ -10,7 +10,12 @@
         </div>
         <div class='row'>
             <div class='col-12 col-md-6'>
-                <b @click="togAddress = !togAddress" class="detailToggle">Show Address:</b>
+                <b 
+                    @click="togAddress = !togAddress" 
+                    class="detailToggle"
+                >
+                    Show Address:
+                </b>
                 <div v-show="togAddress" class="card mb-0">
                     <div class="card-body">
                         <div 
@@ -23,7 +28,12 @@
                 </div>
             </div>
             <div class='col-12 col-md-6'>
-                <b @click="togCompany = !togCompany" class="detailToggle">Show Company:</b>
+                <b 
+                    @click="togCompany = !togCompany" 
+                    class="detailToggle"
+                >
+                    Show Company:
+                </b>
                 <div v-show="togCompany" class="card mb-0">
                     <div class="card-body">
                         <div 
@@ -39,7 +49,7 @@
     </div>
 </template>
 
-<script>
+<script scoped>
     export default {
         props: ['detail'],
         data: function () {
@@ -50,6 +60,7 @@
         }
     }
 </script>
+
 <style>
     .detailToggle:hover{
         cursor: pointer; 

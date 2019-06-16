@@ -10,17 +10,17 @@
 </template>
 
 <script>
-  import usersList from './components/usersList.vue'
+  import UsersList from './components/UsersList.vue'
 
   export default {
     name: 'app',
     components: {
-      usersList
+      UsersList
     }
   }
 </script>
 
-<style>
+<style scoped>
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -29,7 +29,7 @@
     margin-top: 0px;
     padding: 0px;
   }
-  .navbar{
+  .navbar {
     background-color: white
   }
 </style>

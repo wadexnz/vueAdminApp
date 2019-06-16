@@ -11,22 +11,22 @@
             </h3>   
         </div>
         <div v-show="toggleBody" class="card-body">
-            <userDetail v-bind:detail="info"/>
+            <UserDetail v-bind:detail="info"/>
             <div v-if="isLoading" class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-            <postView 
+            <PostItem 
                 v-for="post in posts"
                 v-bind:key="post.id" 
                 v-bind:post="post"
-            ></postView>
+            ></PostItem>
         </div>
     </div>
 </template>
 
 <script>
-    import postView from "./post"
-    import userDetail from "./userDetail"
+    import PostItem from "./PostItem"
+    import UserDetail from "./UserDetail"
 
     export default {
         props: ['info'],
@@ -52,12 +52,13 @@
             }
         },
         components: {
-            postView,
-            userDetail
+            PostItem,
+            UserDetail
         }
     }
 </script>
-<style>
+
+<style scoped>
     .userToggle:hover{
         cursor: pointer; 
         text-decoration: underline;

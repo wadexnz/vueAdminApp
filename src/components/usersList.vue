@@ -3,21 +3,18 @@
         <div v-if="isLoading" class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-        <user 
+        <UserItem 
             v-for="user in users"
             v-bind:key="user.id"
             v-bind:info="user"
-        ></user>
+        ></UserItem>
     </div>
 </template>
 
-<script>
-    import user from './user.vue'
+<script scoped>
+    import UserItem from './UserItem.vue'
 
     export default {
-        components: {
-            user
-        },
         data: function () {
             return {
                 users: [],
@@ -32,7 +29,9 @@
                     vm.users = res;
                     vm.isLoading = false;
                 });
-        }
-        
+        },
+        components: {
+            UserItem
+        },
     }
 </script>
