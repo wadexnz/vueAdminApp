@@ -11,7 +11,7 @@
     </div>
 </template>
 
-<script scoped>
+<script>
     import UserItem from './UserItem.vue'
 
     export default {
